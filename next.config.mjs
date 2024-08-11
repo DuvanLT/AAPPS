@@ -4,7 +4,7 @@ const nextConfig = {
         return [
             {
                 source: '/Apps',
-                destination: 'http://localhost:7000/Apps',
+                destination: 'https://aapps.vercel.app/:7000/Apps',
             
             }
         ]
