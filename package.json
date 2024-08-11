@@ -1,0 +1,32 @@
+{
+  "name": "aapps",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "private": true,
+  "author": "Duvan Mancilla",
+  "license": "ISC",
+  "description": "",
+  "scripts": {
+    "start": "node server/index.js",
+    "dev": "concurrently \"npm run backend\" \"npm run frontend\"", 
+    "backend": "node server/index.js", 
+    "frontend": "next dev", 
+    "build": "next build",
+    "frontend:start": "next start", 
+    "lint": "next lint" 
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "mongodb": "^6.8.0",
+    "mongoose": "^8.5.2",
+    "react": "^18",
+    "react-dom": "^18",
+    "next": "14.2.5"
+  },
+  "devDependencies": {
+    "postcss": "^8",
+    "tailwindcss": "^3.4.1"
+  }
+}
