@@ -10,7 +10,8 @@ export default function Home() {
       <Nav />
       <Title titulo="COMUNICACION" />
       <AppCategory category="chatting" /> 
-      <Title titulo="VIDEOJUEGOS" />
+      <Title titulo="REDES SOCIALES" />
+      <AppCategory category="social media" />
     </div>
   );
 }
