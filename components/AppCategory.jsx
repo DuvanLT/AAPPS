@@ -28,11 +28,11 @@ function AppCategory({ category }) {
             <div className="text-app">
               <div>
                 <h2 className="font-bold text-xl font-spaceMono font-bold uppercase">{app.name}</h2>
-                <p className="text-[14px] md:text-sm font-Roboto font-normal hidden md:block ">{app.description}</p>
+                <p className="text-[14px] md:text-sm font-Roboto font-medium hidden md:block ">{app.description}</p>
               </div>
             </div>
           </div>
-          <p className="text-[14px] md:text-sm font-Roboto font-normal block md:hidden">{app.description}</p>
+          <p className="text-[14px] md:text-sm font-Roboto font-medium block md:hidden">{app.description}</p>
           <div className="bottom flex justify-between mt-2">
             <select name="select" className="bg-black text-white font-Roboto font-bold text-[12px] md:px-2 pr-6 md:pr-14 py-1 rounded-sm" onChange={(e) => handleDownloadChange(e.target.value)}>
               <option value="" disabled selected>Descargar</option>
