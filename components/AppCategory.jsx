@@ -24,7 +24,7 @@ function AppCategory({ category, name }) {
     <div className="flex justify-between flex-wrap max-w-[1050px] m-auto">
       {appsToDisplay.length > 0 ? (
         appsToDisplay.map(app => (
-          <div key={app.name} className="game w-[420px] mt-10 mx-4">
+          <div key={app.name} className="app min-w-[240px] max-w-[420px] mt-10 mx-4 text-start">
             <div className="flex gap-4 items-center">
               <picture className="logo max-w-12 md:max-w-16 rounded-sm">
                 <img src={app.logo} alt={`${app.name} logo`} className="max-w-12 md:max-w-16 rounded-2xl" />
