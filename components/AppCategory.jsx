@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-function AppCategory({ category, name }) {
+function AppCategory({ category, name, filter }) {
   const [appsInfo, setAppsInfo] = useState([]);
 
   useEffect(() => {
