@@ -4,6 +4,7 @@ import Title from "@/components/Title";
 import AppCategory from "@/components/AppCategory"; 
 import Nav from "@/components/Nav";
 import Hero from "@/components/Hero";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
       <AppCategory category="code" />
       <Title titulo="REDES SOCIALES" />
       <AppCategory category="social media" />
+      <Footer />
     </div>
   );
 }

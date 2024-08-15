@@ -30,7 +30,7 @@ export default function Hero() {
       </select>
       </form>
    
-      <AppCategory category={["social media", "chatting"]} name={searchQuery.toLowerCase()} />
+      <AppCategory category={["social media", "chatting"]} name={searchQuery.toLowerCase()} filter={[]} />
       </section>
     </div>
   );
