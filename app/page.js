@@ -12,6 +12,8 @@ export default function Home() {
       <Hero />
       <Title titulo="COMUNICACION" />
       <AppCategory category="chatting" /> 
+      <Title titulo="PROGRAMACION" />
+      <AppCategory category="code" />
       <Title titulo="REDES SOCIALES" />
       <AppCategory category="social media" />
     </div>

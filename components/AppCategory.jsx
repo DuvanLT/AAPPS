@@ -12,7 +12,7 @@ function AppCategory({ category, name }) {
   const filteredApps = appsInfo.filter(app => app.category.includes(category)).slice(0, 10);
   const searching = appsInfo.filter(app => app.name.toLowerCase().includes(name));
 
-  const appsToDisplay = name ? searching : filteredApps;
+  const appsToDisplay = name ? searching : filteredApps ;
 
   const handleDownloadChange = (url) => {
     if (url) {
@@ -31,7 +31,7 @@ function AppCategory({ category, name }) {
               </picture>
               <div className="text-app">
                 <div>
-                  <h2 className="font-bold text-xl font-spaceMono font-bold uppercase">{app.name}</h2>
+                  <h2 className="font-bold text-xl font-spaceMono font-bold uppercase bg-gradient-to-r from-blue-600 via-green-500 to-indigo-400 inline-block text-transparent bg-clip-text">{app.name}</h2>
                   <p className="text-[14px] md:text-sm font-Roboto font-medium hidden md:block ">{app.description}</p>
                 </div>
               </div>
