@@ -17,6 +17,8 @@ export default function Home() {
       <AppCategory category="code" />
       <Title titulo="REDES SOCIALES" />
       <AppCategory category="social media" />
+      <Title titulo="HERRAMIENTAS" />
+      <AppCategory category="Tools" />
       <Title titulo="EDUCACION" />
       <AppCategory category="Education" />
       <Footer />
