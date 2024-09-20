@@ -21,6 +21,8 @@ export default function Home() {
       <AppCategory category="Tools" />
       <Title titulo="EDUCACION" />
       <AppCategory category="Education" />
+      <Title titulo="NAVEGADORES" />
+      <AppCategory category="Browser" />
       <Footer />
     </div>
   );
