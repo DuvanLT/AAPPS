@@ -9,7 +9,13 @@ function AppCategory({ category, name, filter }) {
       .then(json => setAppsInfo(json));
   }, []);
 
-  const filteredApps = appsInfo.filter(app => app.category.includes(category)).slice(0, 10);
+  let filteredApps
+  if(filter === "movil"){
+    filteredApps = appsInfo.filter(app => app.category.includes(category) || app.android || app.apple_ios).slice(0, 10);
+  }else{
+    filteredApps = appsInfo.filter(app => app.category.includes(category)).slice(0, 10);
+  }
+  
   const searching = appsInfo.filter(app => app.name.toLowerCase().includes(name));
 
   const appsToDisplay = name ? searching : filteredApps ;
@@ -22,6 +28,9 @@ function AppCategory({ category, name, filter }) {
 
   return (
     <div className="flex justify-between flex-wrap max-w-[1050px] m-auto">
+      {filter === "movil" && (
+        <h1 className="w-full text-3xl mt-10 font-spaceMono font-bold text-blue-600 underline">TODAS LAS APPS MOVILES</h1>
+      )}
       {appsToDisplay.length > 0 ? (
         appsToDisplay.map(app => (
           <div key={app.name} className="app min-w-[240px] max-w-[420px] mt-10 mx-4 text-start">

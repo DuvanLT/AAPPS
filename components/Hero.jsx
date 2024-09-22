@@ -4,6 +4,11 @@ import AppCategory from "./AppCategory";
 
 export default function Hero() {
   const [searchQuery, setSearchQuery] = useState("");
+  const [filter,setFilter] = useState("todos")
+
+  function handleFilter(event) {
+    setFilter(event.target.value)
+  }
 
   function Search(formData) {
     const query = formData.get("query");
@@ -25,14 +30,13 @@ export default function Hero() {
             className="md:w-[600px] rounded-3xl p-4 pl-10  relative text-zinc-500 border-solid border-2 border-black bg-black font-spaceMono font-bold mt-10" 
         />
       </form>
-       <select className="p-4 rounded-2xl m-2 font-spaceMono font-bold bg-black text-white max-w-24">
+       <select value={filter} onChange={handleFilter}  className="p-4 rounded-2xl m-2 font-spaceMono font-bold bg-black text-white max-w-24">
         <option className=""selected value="todos" >Todos</option>
         <option value="movil">Movil</option>
-        <option value="computadora">Computadora</option>
       </select>
       </div>
    
-      <AppCategory category={["social media", "chatting"]} name={searchQuery.toLowerCase()} filter={[]} />
+      <AppCategory category={["social media", "chatting"]} name={searchQuery.toLowerCase()} filter={filter} />
       </section>
     </div>
   );
