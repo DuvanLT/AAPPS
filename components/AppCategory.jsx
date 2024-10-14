@@ -35,10 +35,19 @@ function AppCategory({ category, name, filter }) {
       {filter === "movil" && (
         <h1 className="w-full text-3xl mt-10 font-spaceMono font-bold text-blue-600 underline">TODAS LAS APPS MOVILES</h1>
       )}
-      {loading ? ( // Mostrar mensaje de carga mientras los datos están siendo obtenidos
-        <div className="w-full text-center text-xl font-bold text-gray-500">
-          Cargando aplicaciones...
+      {loading ? ( 
+        <>
+        <div className="flex flex-col lg:flex-row flex-wrap">
+          <div className="min-w-[240px] max-w-[420px] h-[120px] bg-gray-700 rounded-lg">
+          </div>
+            <div className="min-w-[240px] max-w-[420px] h-[120px] bg-gray-700 rounded-lg">
+          </div>
+          <div className="min-w-[240px] max-w-[420px] h-[120px] bg-gray-700 rounded-lg">
+          </div>
+          <div className="min-w-[240px] max-w-[420px] h-[120px] bg-gray-700 rounded-lg">
+          </div>
         </div>
+         </>
       ) : appsToDisplay.length > 0 ? (
         appsToDisplay.map(app => (
           <div key={app.name} className="app min-w-[240px] max-w-[420px] mt-10 mx-4 text-start">
