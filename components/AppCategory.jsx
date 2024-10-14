@@ -2,13 +2,18 @@ import { useEffect, useState } from "react";
 
 function AppCategory({ category, name, filter }) {
   const [appsInfo, setAppsInfo] = useState([]);
+  const [loading, setLoading] = useState(true);
+
 
   useEffect(() => {
+    setLoading(true); 
     fetch('/Apps')
       .then(response => response.json())
-      .then(json => setAppsInfo(json));
+      .then(json => {
+        setAppsInfo(json);
+        setLoading(false);
+      });
   }, []);
-
   let filteredApps
   if(filter === "movil"){
     filteredApps = appsInfo.filter(app => app.category.includes(category) || app.android || app.apple_ios).slice(0, 10);
@@ -25,13 +30,16 @@ function AppCategory({ category, name, filter }) {
       window.location.href = url;
     }
   };
-
   return (
     <div className="flex justify-between flex-wrap max-w-[1050px] m-auto">
       {filter === "movil" && (
         <h1 className="w-full text-3xl mt-10 font-spaceMono font-bold text-blue-600 underline">TODAS LAS APPS MOVILES</h1>
       )}
-      {appsToDisplay.length > 0 ? (
+      {loading ? ( // Mostrar mensaje de carga mientras los datos están siendo obtenidos
+        <div className="w-full text-center text-xl font-bold text-gray-500">
+          Cargando aplicaciones...
+        </div>
+      ) : appsToDisplay.length > 0 ? (
         appsToDisplay.map(app => (
           <div key={app.name} className="app min-w-[240px] max-w-[420px] mt-10 mx-4 text-start">
             <div className="flex gap-4 items-center">
@@ -62,7 +70,7 @@ function AppCategory({ category, name, filter }) {
           </div>
         ))
       ) : (
-        <span className={`${name ? "block" : "hidden"} text-red-500 font-bold m-10`}>Lo sentimos esta App no esta disponible</span>
+        <span className={`${name ? "block" : "hidden"} text-red-500 font-bold m-10`}>Lo sentimos esta App no está disponible</span>
       )}
     </div>
   );
