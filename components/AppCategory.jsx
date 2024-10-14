@@ -37,10 +37,10 @@ function AppCategory({ category, name, filter }) {
       )}
       {loading ? ( 
         <>
-        <div className="flex flex-col lg:flex-row flex-wrap gap-4 justify-between max-w-[1050px] m-auto ">
-          <div className="min-w-[240px] max-w-[420px] h-[120px] bg-gray-500 rounded-lg">
+        <div className="flex flex-col lg:flex-row flex-wrap gap-4 justify-between lg:min-w[900px] max-w-[1050px] m-auto ">
+          <div className="max-w-[620px] h-[120px] bg-gray-500 rounded-lg">
           </div>
-            <div className="min-w-[240px] max-w-[620px] h-[120px] bg-gray-500 rounded-lg">
+            <div className="max-w-[620px] h-[120px] bg-gray-500 rounded-lg">
           </div>
         </div>
          </>
