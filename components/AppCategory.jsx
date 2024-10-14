@@ -20,7 +20,7 @@ function AppCategory({ category, name, filter }) {
   }else{
     filteredApps = appsInfo.filter(app => app.category.includes(category)).slice(0, 10);
   }
-  
+
   const searching = appsInfo.filter(app => app.name.toLowerCase().includes(name));
 
   const appsToDisplay = name ? searching : filteredApps ;

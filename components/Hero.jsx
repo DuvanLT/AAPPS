@@ -30,7 +30,7 @@ export default function Hero() {
             className="md:w-[600px] rounded-3xl p-4 pl-10  relative text-zinc-500 border-solid border-2 border-black bg-black font-spaceMono font-bold mt-10" 
         />
       </form>
-       <select value={filter} onChange={handleFilter}  className="p-4 rounded-2xl m-2 font-spaceMono font-bold bg-black text-white max-w-24">
+       <select value={filter} onChange={handleFilter}  className="p-4 rounded-2xl mx-2 my-1.5 font-spaceMono font-bold bg-black text-white max-w-32 h-full">
         <option className=""selected value="todos" >Todos</option>
         <option value="movil">Movil</option>
       </select>
