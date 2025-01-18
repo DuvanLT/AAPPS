@@ -4,7 +4,7 @@ const nextConfig = {
         return [
             {
                 source: '/Apps',
-                destination: 'https://aapps.onrender.com/Apps',
+                destination: 'https://aapps.vercel.app/Apps',
             
             }
         ]
